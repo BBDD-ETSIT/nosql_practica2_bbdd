@@ -4,26 +4,22 @@
 
 <br/><br/><br/>
 
-# nosql_practica2_bdfi
-## Objetivos
- * Objetivo 1
- * Objetivo 2
+# nosql_practica2_bbdd
 ## Descripción de la práctica
 
-A completar por el profesor
-
+Provista en PDF en el Moodle de la asignatura.
 
 ## Descargar el código del proyecto
 
 El proyecto debe clonarse en el ordenador desde el que se está trabajando:
 
 ```
-$ git clone https://github.com/ebarra/nosql_practica2_bdfi
+$ git clone https://github.com/ebarra/nosql_practica2_bbdd
 ```
 A continuación se debe acceder al directorio de trabajo y abrir el fichero index.html con el editor de la elección del alumno.
 
 ```
-$ cd nosql_practica2_bdfi
+$ cd nosql_practica2_bbdd
 ```
 ## Prueba de la práctica 
 

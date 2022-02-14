@@ -2,12 +2,8 @@
     "name": "nosql_practica2",
     "version": "0.0.0",
     "description": "autoCOREctor de la asignatura de BBDD (UPM)",
-    "main": "dist/index.js",
-    "bin": {
-        "autocorector": "./dist/index.js"
-    },
     "keywords": [
-        "CORE",
+        "BBDD",
         "self-assessment"
     ],
     "author": "ging",
@@ -17,32 +13,13 @@
         "serverUrl": "https://autocorector.dit.upm.es/",
         "courseId": "2110",
         "assignmentId": "16973"
-    }
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/ging/autoCOREctor",
         "directory": "client"
     },
     "dependencies": {
-        "body-parser": "~1.12.4",
-        "ejs": "^3.0.1",
-        "express": "~4.13.1",
-        "method-override": "^2.3.1",
-        "mocha": "^7.0.1",
-        "mongoose": "^6.0.13",
-        "mongoose-data-seed": "^2.1.6",
-        "nodemon": "^2.0.2",
-        "popper.js": "^1.16.1",
-        "autocorector": "^1.3.0"
-    },
-    "scripts": {
-        "start": "node rest_server.js",
-        "seed": "md-seed run",
-        "test": "autocorector",
-        "upload": "autocorector -u",
-        "test:old": "nodemon --exec 'mocha -R min'"
-    },
-    "mdSeed": {
-        "seedersFolder": "./seeders"
+        "mongoose": "^6.0.13"
     }
 }
