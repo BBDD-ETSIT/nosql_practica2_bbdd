@@ -20,6 +20,7 @@ A continuación se debe acceder al directorio de trabajo y abrir el fichero inde
 
 ```
 $ cd nosql_practica2_bbdd
+$ npm install
 ```
 ## Prueba de la práctica 
 
