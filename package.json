@@ -2,6 +2,7 @@
     "name": "nosql_practica2",
     "version": "0.0.1",
     "description": "autoCOREctor de la asignatura de BBDD (UPM)",
+    "debug": false,
     "keywords": [
         "BBDD",
         "self-assessment"

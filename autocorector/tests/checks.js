@@ -1,18 +1,19 @@
 // IMPORTS
 const path = require('path');
-const User = require('../user.json');
+const User = require('../../user.json');
 
 // CRITICAL ERRORS
 let error_critical = null;
 let dbname = "data";
 let coleccion = "companies";
-const URL = 'mongodb://localhost:27017/' + dbname;
+const URL = 'mongodb://127.0.0.1:27017/' + dbname;
 let connection;
 
 const mongoose = require('mongoose');
+mongoose.set('strictQuery', true);
 let Admin = mongoose.mongo.Admin;
-const Company = require('./company');
-const Result = require('./result');
+const Company = require('../utils/company');
+const Result = require('../utils/result');
 
 let withDebug = true;
 const debug = (...args) => {
@@ -31,6 +32,7 @@ describe("Using Mongo SHELL", function () {
 
         try {
             await mongoose.connect(URL, {useNewUrlParser: true, useUnifiedTopology: true, socketTimeoutMS: 3000, connectTimeoutMS:3000, serverSelectionTimeoutMS: 2000});
+            
             //connection = await mongoose.createConnection(URL, {useNewUrlParser: true, useUnifiedTopology: true, socketTimeoutMS: 3000, connectTimeoutMS:3000, serverSelectionTimeoutMS: 2000});
             //should.exist(connection);
 
@@ -111,7 +113,7 @@ describe("Using Mongo SHELL", function () {
         this.msg_err = `Las compañías fundadas después de 2012 NO tienen el campo adicional solicitado`;
         try {
           let com = await Company.find({founded_year: {$gte: 2012}, uptodate: true});
-          debug("COM: ", com);
+          //debug("COM: ", com);
           com.length.should.be.equal(43);
         } catch(e){
           debug("ERROR:", e);
@@ -239,7 +241,7 @@ describe("Using Mongo SHELL", function () {
       try {
         dbexists.should.be.equal(true);
         let com = await Company.findOne({name: "FoodCare"});
-        debug("COM: ", com);
+        debug("COM: ", com.products);
         com.products.length.should.be.equal(6);
         com.products[5].name.should.be.equal("Future Edition");
         com.products[5].permalink.should.be.equal("future-edition");
@@ -272,7 +274,7 @@ describe("Using Mongo SHELL", function () {
       try {
         dbexists.should.be.equal(true);
         let com = await Company.findOne({name: "CircleUp"});
-        debug("COM: ", com);
+        debug("COM: ", com.relationships);
         com.relationships.length.should.be.equal(6);
       } catch(e){
         debug("ERROR:", e);
@@ -287,7 +289,7 @@ describe("Using Mongo SHELL", function () {
       try {
         dbexists.should.be.equal(true);
         let com = await Company.findOne({name: "Gimigo"});
-        debug("COM: ", com);
+        debug("COM: ", com.phone_number);
         com.phone_number.should.be.equal(2065382800);
       } catch(e){
         debug("ERROR:", e);
