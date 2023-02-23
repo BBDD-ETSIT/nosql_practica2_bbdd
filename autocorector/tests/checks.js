@@ -15,7 +15,7 @@ let Admin = mongoose.mongo.Admin;
 const Company = require('../utils/company');
 const Result = require('../utils/result');
 
-let withDebug = true;
+let withDebug = false;
 const debug = (...args) => {
     if(withDebug){
       console.log(...args);
