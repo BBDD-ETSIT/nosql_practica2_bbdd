@@ -10,9 +10,9 @@
     "license": "GNU",
     "info": {
         "githubURL": "BBDD-ETSIT/nosql_practica2_bbdd",
-        "serverUrl": "https://autocorector.dit.upm.es/",
+        "serverUrl": "https://aat.dit.upm.es/",
         "courseId": "2110",
-        "assignmentId": "16973"
+        "assignmentId": "7830"
     },
     "repository": {
         "type": "git",
