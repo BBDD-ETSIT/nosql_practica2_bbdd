@@ -3,6 +3,8 @@
     "version": "0.0.1",
     "description": "autoCOREctor de la asignatura de BBDD (UPM)",
     "debug": false,
+    "capturesFolder": "miscapturas",
+    "capturesNumber": 3,   
     "keywords": [
         "BBDD",
         "self-assessment"
