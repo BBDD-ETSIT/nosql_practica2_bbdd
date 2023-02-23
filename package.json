@@ -20,6 +20,7 @@
         "directory": "client"
     },
     "dependencies": {
+        "autocorector": "^3.1.6",
         "mongoose": "^6.0.13"
     }
 }
